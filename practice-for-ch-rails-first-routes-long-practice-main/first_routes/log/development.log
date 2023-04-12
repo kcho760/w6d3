@@ -62,3 +62,187 @@ Started GET "/users" for ::1 at 2023-04-12 14:40:55 -0400
 ActionController::RoutingError (No route matches [GET] "/users"):
   
 Started GET "/users" for ::1 at 2023-04-12 14:43:57 -0400
+Started GET "/" for ::1 at 2023-04-12 14:53:07 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tonysistence/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tonysistence/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 527)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2801)
+
+
+Started GET "/" for ::1 at 2023-04-12 14:53:11 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tonysistence/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tonysistence/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 278)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Started GET "/users/banana" for ::1 at 2023-04-12 14:53:20 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"banana"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Started GET "/users/banana" for ::1 at 2023-04-12 14:53:35 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"banana"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 549)
+
+
+Started GET "/users/bana" for ::1 at 2023-04-12 14:53:38 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"id"=>"bana"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 162)
+
+
+Started GET "/users" for ::1 at 2023-04-12 15:01:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/1" for ::1 at 2023-04-12 15:06:07 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+Started GET "/users/?hello=its%20me" for ::1 at 2023-04-12 15:06:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users/?hello=its%20me" for ::1 at 2023-04-12 15:06:39 -0400
+Processing by UsersController#create as */*
+  Parameters: {"hello"=>"its me"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 213)
+
+
+Started POST "/users/?fav_food=pizza&controller=users&action=create" for ::1 at 2023-04-12 15:09:35 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started POST "/users/?hello=its%20me" for ::1 at 2023-04-12 15:09:53 -0400
+Processing by UsersController#create as */*
+  Parameters: {"hello"=>"its me"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started POST "/users/?fav_food=pizza&controller=anton&action=make_admin" for ::1 at 2023-04-12 15:10:15 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started POST "/users/?fav_food=pizza&controller=anton&action=make_admin" for ::1 at 2023-04-12 15:10:23 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started POST "/users/?fav_food=pizza&controller=anton&action=make_admin" for ::1 at 2023-04-12 15:10:36 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started POST "/users/?controller=anton" for ::1 at 2023-04-12 15:10:51 -0400
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users/?fav_food=pizza&controller=anton&action=make_admin" for ::1 at 2023-04-12 15:11:01 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started POST "/users/?fav_food=pizza&co=anton&action=make_admin" for ::1 at 2023-04-12 15:11:24 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza", "co"=>"anton"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Started POST "/users/?fav_food=pizza&co=anton&acti=make_admin" for ::1 at 2023-04-12 15:11:48 -0400
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza", "co"=>"anton", "acti"=>"make_admin"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 127)
+
+
+Started GET "/users/:id" for ::1 at 2023-04-12 15:14:08 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>":id"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 436)
+
+
+Started GET "/users/:id" for ::1 at 2023-04-12 15:14:54 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>":id"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 438)
+
+
+Started GET "/users/" for ::1 at 2023-04-12 15:15:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/2" for ::1 at 2023-04-12 15:15:19 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"2"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 157)
+
+
+Started GET "/users/" for ::1 at 2023-04-12 15:15:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/slice" for ::1 at 2023-04-12 15:18:16 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"slice"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 436)
+
+
+Started GET "/users" for ::1 at 2023-04-12 15:19:18 -0400
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+Started GET "/users/gds;gmlksdgm" for ::1 at 2023-04-12 15:19:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"gds;gmlksdgm"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 96)
+
+
+Started GET "/users/gds;gmlksdgm?id=2" for ::1 at 2023-04-12 15:23:14 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"gds;gmlksdgm"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 68)
+
+
+Started GET "/users/2" for ::1 at 2023-04-12 15:23:56 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/users?some_category[a_key]=[FILTERED]&some_category[a_second_key]=[FILTERED]&some_category[inner_inner_hash][key]=value&something_else=aaahhhhh" for ::1 at 2023-04-12 15:25:44 -0400
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]", "a_second_key"=>"[FILTERED]", "inner_inner_hash"=>{"key"=>"value"}}, "something_else"=>"aaahhhhh"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 156)
+
+
