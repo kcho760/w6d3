@@ -17,9 +17,23 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: "I'm in the show action!" 
+        render json: User.find(params[:id])
     end
 
+    def update
+        @user = User.find(params[:id])
+        debugger
+        if @user.update(params.require(:user).permit(:name, :email))
+            redirect_to user_url(@user)
+        else
+            render json: @user.errors.full_messages, status: 422
+        end
+    end
+
+    def destroy
+        User.find(params[:id]).destroy
+        redirect_to user_url
+    end
     # def user_params
     #     params.require(:user).permit(:name)
     # end
