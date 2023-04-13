@@ -19,6 +19,9 @@ class Artwork < ApplicationRecord
 
     has_many :artwork_shares, # same issue as user foreign key
         class_name: :ArtworkShare,
-        foreign_key: :artwork_id
+        foreign_key: :artwork_id,
+        dependent: :destroy
+
+    #add through
 
 end

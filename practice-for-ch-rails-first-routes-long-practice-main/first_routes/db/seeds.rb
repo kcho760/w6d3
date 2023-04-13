@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+require 'faker'
 ActiveRecord::Base.transaction do 
     puts "Preparing environment"
 
@@ -16,14 +16,14 @@ ActiveRecord::Base.transaction do
 
     puts "Resetting id sequences"
 
-    # %w(users artworks artwork_shares).each do |table_name|
-    #     ApplicationRecord.connection.reset_pk_squence!(table_name)
-    # end
+    %w(users artworks artwork_shares).each do |table_name|
+        ApplicationRecord.connection.reset_pk_sequence!(table_name)
+    end
 
     puts "creating seed data"
 
     anton = User.create(
-        username: "Anton"
+        username: Faker::FunnyName.name
     )
     kevin = User.create(
         username: "Kevin"

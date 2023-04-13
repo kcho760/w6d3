@@ -1,8 +1,15 @@
 class ArtworksController < ApplicationController
 
   def index
-    render json: Artwork.all
+    render json: artworks_for_user_id
   end 
+  def artworks_for_user_id
+    results = []
+    # debugger
+    results.concat(User.select('artworks.title').distinct.joins(:shares).where(artworks: {artist_id: params[:user_id]}))
+    results.concat(User.select('artworks.title').joins(:shares).where(artwork_shares: {viewer_id: params[:user_id]}))
+    results
+  end
 
   def create
     # debugger
@@ -16,7 +23,7 @@ class ArtworksController < ApplicationController
 
   def show
     render json: Artwork.find(params[:id])
-  end
+end
 
   def update
     @artwork = Artwork.find(params[:id])
