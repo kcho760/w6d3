@@ -10,8 +10,8 @@ ActiveRecord::Base.transaction do
     puts "Preparing environment"
 
     puts 'Destroying tables'
-    User.destroy_all
-    Artwork.destroy_all
+    # User.destroy_all
+    # Artwork.destroy_all
     # Artwork_share.destroy_all
 
     puts "Resetting id sequences"
@@ -51,5 +51,31 @@ ActiveRecord::Base.transaction do
         image_url: "www.thestarrynight.com",
         artist_id: anton.id
     )
+
+    mona_lisa_share = ArtworkShare.create(
+        artwork_id: mona_lisa.id,
+        viewer_id: kevin.id   
+    )
+
+    mona_lisa_share = ArtworkShare.create(
+        artwork_id: mona_lisa.id,
+        viewer_id: spencer.id   
+    )
+
+    the_last_supper_share = ArtworkShare.create(
+        artwork_id: the_last_supper.id,
+        viewer_id: kevin.id   
+    )
+
+    the_last_supper_share = ArtworkShare.create(
+        artwork_id: the_last_supper.id,
+        viewer_id: kin.id   
+    )
+
+    the_starry_night_share = ArtworkShare.create(
+        artwork_id: the_starry_night.id,
+        viewer_id: kin.id 
+    )
+
 
 end
