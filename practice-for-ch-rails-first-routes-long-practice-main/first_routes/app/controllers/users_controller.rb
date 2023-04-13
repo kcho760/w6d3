@@ -34,7 +34,8 @@ class UsersController < ApplicationController
         User.find(params[:id]).destroy
         redirect_to user_url
     end
+
     # def user_params
-    #     params.require(:user).permit(:name)
+    #     params.require(:user).permit(:name, :email)
     # end
 end
